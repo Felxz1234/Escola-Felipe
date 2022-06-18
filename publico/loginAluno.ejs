@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login aluno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #caixa{
+            margin-top: 88px;
+            width: 400px;
+            height: 500px ;
+            border-radius: 10px;
+        }
+        .inp{
+            width: 300px;
+            height: 60px;
+        }
+        .botao{
+            width: 100px;
+        }
+        
+        
+    
+    </style>
+</head>
+<body>
+    <div id="caixa" class="container border d-flex justify-content-center align-items-center">
+       <form action="/login" method="post">
+           <h3 class=>Fazer login</h3>
+           <small class="">logue com sua conta da escola</small>
+           <div class="form-group w-4">
+               <label for="">Email</label>
+               <input  name="email" class="form-control inp" type="email" placeholder="email">
+           </div>
+           <div class="form-group">
+               <label for="">Password</label>
+               <input  name="senha"  placeholder="password" class="form-control  inp" type="password">
+               <small class="form-text text-muted">nunca passe sua senha para ninguem</small>
+           </div>
+           <button  class="btn btn-primary botao ">logar</button>
+           
+           <%if(error){%>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%=error%>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <%}%>
+       </form>
+       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
