@@ -8,8 +8,9 @@ const rotaProf = require('./rotaProfe/routerProfe')
 const bodyParser = require('body-parser')
 const socketIO = require('socket.io')
 const dotenv = require('dotenv').config();
+let port = process.env.PORT || 8080
 
-const server = app.listen(process.env.PORT,()=>{
+const server = app.listen(port,()=>{
     console.log('Server Running')
 })
 
